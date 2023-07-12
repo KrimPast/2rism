@@ -1,0 +1,500 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import "./nav-icon.css";
+@import "./mobile-nav.css";
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+.container{
+	margin: 0 auto;
+	padding: 0 32px;
+	max-width: 1440px;
+}
+.none{
+	display: none !important;
+}
+
+/* Header */
+
+.container--header{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.header{
+	padding: 31px 0 100px;
+	height: 800px;
+	color: #fff;
+	background-color: #000;
+	background-image: url("./../img/header/pictures/background.png");
+	background-size: cover;
+	background-position: center center;
+	border-radius: 0 0 54px 54px;
+}
+.header a{
+	color: #fff;
+}
+
+/* Nav */
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav > * + *{
+	margin-left: 30px;
+}
+.logo {
+	flex-shrink: 0;
+}
+.nav-list {
+	display: flex;
+	font-size: 14px;
+	font-weight: 300;
+}
+.nav-list li + li{
+	margin-left: 54px;
+}
+.nav-list__item {}
+.nav-list__link {
+	opacity: 0.7;
+}
+.nav-list__link--active {
+	opacity: 1;
+}
+
+/* User */
+.user {
+	display: flex;
+	align-items: center;
+
+}
+.user > * + *{
+	margin-left: 8px;
+}
+.user__content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	color: #fff;
+}
+.user__greeting {
+	opacity: 0.5;
+}
+.user__name {
+	font-weight: 600;
+}
+.user__avatar {
+	position: relative;
+}
+.user__avatar::after{
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 0;
+	width: 12px;
+	height: 12px;
+	background-color: #FF0000;
+	border-radius: 50%;
+}
+.user__avatar-img {
+	border-radius: 50%;
+}
+
+/* Header content */
+.header__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.header__content > * + *{
+	margin-top: 30px;
+}
+.header__title {
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 1.3;
+}
+
+/* Buttons */
+
+.button {
+	background-color: #7B61FF;
+	border-radius: 12px;
+	color: #fff;
+
+	transition: background-color 0.2s ease-in;
+}
+.button:hover{
+	background: #6344ff;
+}
+.button-huge {
+	padding: 24px;
+	font-size: 18px;
+	font-weight: 600;
+
+	display: flex;
+	align-items: center;
+}
+.button-huge img{
+	margin-right: 8px;
+}
+.button-search{
+	width: 60px;
+	height: 60px;
+	padding: 18px;
+}
+.button-more {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	background: #F6F4FF;
+	border-radius: 12px;
+}
+.button-more img{
+	margin-left: 8px;
+}
+.button--subscribe {
+	padding: 24px;	
+}
+/* Form */
+.form {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 8px;
+
+	width: 1140px;
+	height: 88px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 12px;
+}
+.form__input-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 15px 20px 16px 56px;
+	background-repeat: no-repeat;
+	background-position: 16px 24px;
+}
+.form__input--location {
+	width: 300px;
+	background-image: url("./../img/header/icons/location.svg");
+	
+}
+.form__input--activity{
+	width: 255px;
+	background-image: url("./../img/header/icons/activity.svg");
+}
+.form__input--date{
+	width: 255px;
+	background-image: url("./../img/header/icons/when.svg");
+}
+.form__input--guests{
+	width: 255px;
+	background-image: url("./../img/header/icons/guests.svg");
+}
+.label {
+	font-size: 14px;
+	font-weight: 300;
+	color: #5B5B5B;
+}
+.form-input {
+	color: #161414;
+	font-weight: 500;
+	cursor: pointer;
+}
+.form-input::placeholder {
+	color: #161414;
+	font-weight: 500;
+}
+
+
+/* Main */
+.title-1{
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #161414;
+}
+.main {
+	padding: 120px 0;
+	display: grid;
+	gap: 120px;
+}
+.section__header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 64px;
+}
+.section__cards {
+	display: grid;
+	gap: 32px;
+}
+.section__cards--popular{
+	grid-template-columns: repeat(6, 1fr);
+}
+.section__cards--hotels,.section__cards--activities	{
+	grid-template-columns: repeat(4, 1fr);
+}
+.section__cards--tips{
+	grid-template-columns: repeat(2, 1fr);
+}
+/* Card */
+
+.card {
+	position: relative;
+}
+.card__link{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.card__img {
+	border-radius: 12px;
+	margin-bottom: 8px;
+}
+.card__title {
+	color: #161414;
+	font-size: 16px;
+	font-weight: 500;
+}
+.card__location {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	color: #979797;
+	transition: color 0.2s ease-in;
+}
+.card__location img{
+	margin-right: 4px;
+}
+.card__location:hover{
+	color: #7B61FF;
+}
+
+.card__img--hotel{
+	margin-bottom: 10px;
+}
+.card__title--hotel{
+	margin-bottom: 12px;
+}
+.card_footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.card__location--icon {
+	padding-left: 20px;
+	background-image: url("./../img/hotels_and_restaraunts/pictures/location.svg");
+	background-repeat: no-repeat;
+	background-position: 0px 1px;
+}
+.card__rating {
+	display: flex;
+	align-items: center;
+}
+.card__rating > * + * {
+	margin-left: 2px;
+}
+.card__img--activity{
+	margin-bottom: 16px;
+}
+.card--tips{
+	display: flex;
+}
+.card__desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 32px;
+}
+.card__img--tips{
+	margin-bottom: 0;
+	border-radius: 24px;
+
+	object-fit: cover;
+}
+.card__title--big {
+
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+.card__text {
+	font-size: 16px;
+	color: #5B5B5B;
+	line-height: 2;
+}
+.card__footer--wide {
+	display: flex;
+	font-size: 12px;
+	flex-wrap: wrap;
+	gap: 6px 24px;
+}
+.card__footer-link {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.card__footer-link img{
+	margin-right: 4px;
+}
+.card__footer-link{
+	color: #878787;
+	transition: color 0.2s ease-in;
+}
+.card__footer-link:hover{
+	color: #7B61FF;
+}
+
+/* About us */
+.about-us {
+	margin: 0 auto;
+	max-width: 1144px;
+	display: grid;
+	gap: 32px;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+.about-us__desc {
+	display: grid;
+	gap: 32px;
+}
+.about-us__title {
+	color: #161414;
+	font-weight: 600;
+	font-size: 32px;
+}
+.about-us__text {
+	font-size: 16px;
+	color: #5B5B5B;
+	line-height: 2;
+}
+.about-us__img {
+	border-radius: 24px;
+	height: 100%;
+	object-fit: cover;
+}
+.about-us__button{
+	display: flex;
+}
+
+/* Footer */
+.footer{
+	padding: 120px 0;
+	background-color: #F9F9F9;
+}
+.footer__row {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 64px;
+
+}
+
+.footer__copyright {
+	max-width: 354.5px;
+	display: grid;
+	gap: 16px;
+}
+.footer__text {
+	margin-bottom: 16px;
+	font-size: 13px;
+	color: #5B5B5B;
+}
+.footer__socials {
+	display: flex;
+	align-items: center;
+}
+.footer__socials li + li{
+	margin-left: 32px;
+}
+.footer__nav-wrapper {
+	display: flex;
+}
+.footer__nav-wrapper > * + *{
+	margin-left: 64px;
+}
+
+.footer__nav {
+	display: grid;
+	gap: 20px;
+}
+.footer__nav-title {
+	color: #161414;
+	font-size: 18px;
+	font-weight: 500;
+}
+.footer__nav-list {}
+.footer__nav-item {
+	font-size: 13px;
+}
+.footer__nav-link {
+	color: #5B5B5B;
+	transition: color 0.2s ease-in;
+}
+.footer__nav-link:hover{
+	color: #7B61FF;
+}
+.footer__nav li + li{
+	margin-top: 12px;
+}
+
+.footer__subscribe {
+	max-width: 433px;
+}
+.footer__subscribe-title {
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #161414;
+}
+.subscribe {
+	max-width: 388px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.subscribe__input-wrapper {
+	position: relative;
+}
+.subscribe__input{
+	padding: 32px 20px 16px 56px;
+
+	font-weight: 500;
+	width: 300px;
+	height: 72px;
+	background-color: #fff;
+	border-radius: 12px;
+	background-image: url("./../img/footer/mail.svg");
+	background-repeat: no-repeat;
+	background-position: 16px 24px;
+}
+.subscribe__label{
+	left: 56px;
+	top: 26px;
+	position: absolute;
+	font-size: 14px;
+	font-weight: 300;
+	color: #5B5B5B;
+
+	transition: top 0.2s ease-in;
+	pointer-events: none;
+}
+.subscribe__input:focus ~ .subscribe__label,
+.subscribe__input:valid ~ .subscribe__label{
+	top: 16px;
+}
+
+.subscribe__label--top{
+	top: 16px;
+}
